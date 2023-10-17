@@ -38,6 +38,20 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.depsLibs.coreKtx
+    implementation rootProject.depsLibs.appcompat
+    implementation rootProject.depsLibs.material
+    implementation rootProject.depsLibs.constraintlayout
 
+    implementation rootProject.depsLibs.refreshLayout
+    implementation rootProject.depsLibs.refreshHeader
+    implementation rootProject.depsLibs.refreshFooter
+
+    implementation rootProject.depsLibs.aroutreApi
+    kapt rootProject.depsLibs.arouterCompiler
+
+    implementation project(path: ':lib_framework')
+//    implementation project(path: ':lib_banner')
 
 }
