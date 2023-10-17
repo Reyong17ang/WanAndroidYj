@@ -1,0 +1,92 @@
+plugins {
+//    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+// 组件模式和基础模式切换
+def root = rootProject.ext
+if (root.isModule) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+android {
+    namespace 'com.example.mod_main'
+    compileSdk rootProject.android.compileSdk
+
+
+    defaultConfig {
+        minSdk rootProject.android.minSdk
+        targetSdk rootProject.android.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        //ARouter
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+    //组件化模式资源切换
+    sourceSets {
+        main {
+            if (rootProject.ext.isModule) {
+                manifest.srcFile 'src/main/java/com/example/mod_main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //library模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+//    implementation 'com.google.android.material:material:1.9.0'
+//    implementation  'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
+    implementation rootProject.depsLibs.coreKtx
+    implementation rootProject.depsLibs.appcompat
+    implementation rootProject.depsLibs.material
+    implementation rootProject.depsLibs.constraintlayout
+    implementation rootProject.depsLibs.liveDataKtx
+    implementation rootProject.depsLibs.viewModelKtx
+    implementation rootProject.depsLibs.navigationFragment
+    implementation rootProject.depsLibs.navigationUI
+
+    implementation rootProject.depsLibs.junit
+    implementation rootProject.depsLibs.extJunit
+    implementation rootProject.depsLibs.espressoCore
+
+    implementation rootProject.depsLibs.gson
+    implementation rootProject.depsLibs.flexbox
+    implementation rootProject.depsLibs.mmkv
+
+    implementation rootProject.depsLibs.refreshLayout
+    implementation rootProject.depsLibs.refreshHeader
+    implementation rootProject.depsLibs.refreshFooter
+
+    implementation rootProject.depsLibs.aroutreApi
+    kapt rootProject.depsLibs.arouterCompiler
+
+    implementation rootProject.depsLibs.tbssdk
+    implementation rootProject.depsLibs.rxPermission
+    implementation rootProject.depsLibs.rxjava
+    implementation rootProject.depsLibs.rxandroid
+}
