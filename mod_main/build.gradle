@@ -1,5 +1,5 @@
 plugins {
-//    id 'com.android.library'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
@@ -35,6 +35,7 @@ android {
                 manifest.srcFile 'src/main/java/com/example/mod_main/module/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
+
                 //library模式下排除debug文件夹中的所有Java文件
                 java {
                     exclude 'debug/**'
@@ -49,11 +50,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_19
+        targetCompatibility = JavaVersion.VERSION_19
     }
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = '19'
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -89,4 +94,12 @@ dependencies {
     implementation rootProject.depsLibs.rxPermission
     implementation rootProject.depsLibs.rxjava
     implementation rootProject.depsLibs.rxandroid
+
+    implementation project(path: ':lib_framework')
+    implementation project(path: ':lib_common')
+    implementation project(path: ':lib_network')
+//    implementation project(path: ':lib_stater')
+//    implementation project(path: ':lib_banner')
+//    implementation project(path: ':lib_glide')
+//    implementation project(path: ':lib_room')
 }

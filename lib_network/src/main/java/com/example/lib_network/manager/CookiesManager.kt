@@ -1,5 +1,6 @@
 package com.example.lib_network.manager
 
+import com.example.lib_common.constant.HTTP_COOKIES_INFO
 import com.example.lib_framework.log.LogUtil
 import com.tencent.mmkv.MMKV
 
