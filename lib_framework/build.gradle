@@ -41,7 +41,6 @@ dependencies {
     implementation rootProject.depsLibs.appcompat
     implementation rootProject.depsLibs.material
     implementation rootProject.depsLibs.gson
-
     implementation rootProject.depsLibs.refreshLayout
     implementation rootProject.depsLibs.tbssdk
 

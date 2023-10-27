@@ -4,20 +4,16 @@ package com.example.mod_main
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-
-
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.lib_common.constant.KEY_INDEX
 import com.example.lib_common.constant.MAIN_ACTIVITY_HOME
 import com.example.lib_framework.base.BaseDataBindActivity
 import com.example.lib_framework.utils.StatusBarSettingHelper
 import com.example.mod_main.databinding.ActivityMainBinding
-
 import com.example.mod_main.navigator.SumFragmentNavigator
 
 @Route(path = MAIN_ACTIVITY_HOME)
