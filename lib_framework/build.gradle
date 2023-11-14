@@ -43,5 +43,4 @@ dependencies {
     implementation rootProject.depsLibs.gson
     implementation rootProject.depsLibs.refreshLayout
     implementation rootProject.depsLibs.tbssdk
-
 }

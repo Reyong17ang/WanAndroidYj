@@ -40,3 +40,6 @@ include(":lib_network")
 include(":lib_build")
 include ':mod_main'
 include ':dushProgressBar'
+include ':lib_starter'
+include ':lib_glide'
+include ':lib_banner'

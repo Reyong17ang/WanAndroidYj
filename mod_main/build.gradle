@@ -1,5 +1,5 @@
 plugins {
-//    id 'com.android.library'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
@@ -63,8 +63,6 @@ android {
 }
 
 dependencies {
-//    implementation 'com.google.android.material:material:1.9.0'
-//    implementation  'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
     implementation 'io.github.youth5201314:banner:2.2.2'
     implementation rootProject.depsLibs.coreKtx
@@ -99,8 +97,8 @@ dependencies {
     implementation project(path: ':lib_framework')
     implementation project(path: ':lib_common')
     implementation project(path: ':lib_network')
-//    implementation project(path: ':lib_stater')
+    implementation project(path: ':lib_starter')
 //    implementation project(path: ':lib_banner')
-//    implementation project(path: ':lib_glide')
+    implementation project(path: ':lib_glide')
 //    implementation project(path: ':lib_room')
 }

@@ -10,6 +10,12 @@ import com.example.lib_framework.manager.ActivityManager
 import com.example.lib_framework.manager.AppFrontBack
 import com.example.lib_framework.manager.AppFrontBackListener
 import com.example.lib_framework.toast.TipsToast
+import com.example.wanandroidyj.task.InitAppManagerTask
+import com.example.wanandroidyj.task.InitArouterTask
+import com.example.wanandroidyj.task.InitMmkvTask
+import com.example.wanandroidyj.task.InitRefreshLayoutTask
+import com.example.wanandroidyj.task.InitSumHelperTask
+import com.sum.stater.dispatcher.TaskDispatcher
 
 class YjApplication : Application() {
     override fun attachBaseContext(base: Context?) {
@@ -26,21 +32,21 @@ class YjApplication : Application() {
         registerActivityLifecycle()
         TipsToast.init(this)
 
-//        //1.启动器：TaskDispatcher初始化
-//        TaskDispatcher.init(this)
-//        //2.创建dispatcher实例
-//        val dispatcher: TaskDispatcher = TaskDispatcher.createInstance()
-//
-//        //3.添加任务并且启动任务
-//        dispatcher.addTask(InitSumHelperTask(this))
-//            .addTask(InitMmkvTask())
-//            .addTask(InitAppManagerTask())
-//            .addTask(InitRefreshLayoutTask())
-//            .addTask(InitArouterTask())
-//            .start()
-//
-//        //4.等待，需要等待的方法执行完才可以往下执行
-//        dispatcher.await()
+        //1.启动器：TaskDispatcher初始化
+        TaskDispatcher.init(this)
+        //2.创建dispatcher实例
+        val dispatcher: TaskDispatcher = TaskDispatcher.createInstance()
+
+        //3.添加任务并且启动任务
+        dispatcher.addTask(InitSumHelperTask(this))
+            .addTask(InitMmkvTask())
+            .addTask(InitAppManagerTask())
+            .addTask(InitRefreshLayoutTask())
+            .addTask(InitArouterTask())
+            .start()
+
+        //4.等待，需要等待的方法执行完才可以往下执行
+        dispatcher.await()
     }
 
     /**
