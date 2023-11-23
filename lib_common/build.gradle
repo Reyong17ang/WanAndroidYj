@@ -57,6 +57,6 @@ dependencies {
     kapt rootProject.depsLibs.arouterCompiler
 
     implementation project(path: ':lib_framework')
-//    implementation project(path: ':lib_banner')
+    implementation project(path: ':lib_banner')
 
 }

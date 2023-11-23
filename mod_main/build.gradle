@@ -64,7 +64,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
-    implementation 'io.github.youth5201314:banner:2.2.2'
     implementation rootProject.depsLibs.coreKtx
     implementation rootProject.depsLibs.appcompat
     implementation rootProject.depsLibs.material
@@ -98,7 +97,7 @@ dependencies {
     implementation project(path: ':lib_common')
     implementation project(path: ':lib_network')
     implementation project(path: ':lib_starter')
-//    implementation project(path: ':lib_banner')
+    implementation project(path: ':lib_banner')
     implementation project(path: ':lib_glide')
 //    implementation project(path: ':lib_room')
 }

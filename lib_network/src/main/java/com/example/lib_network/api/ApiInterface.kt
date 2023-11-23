@@ -1,8 +1,8 @@
 package com.sum.network.api
 
+import com.example.lib_common.model.Banner
 import com.example.lib_network.response.BaseResponse
 import com.sum.common.model.ArticleList
-import com.sum.common.model.Banner
 import com.sum.common.model.CategoryItem
 import com.sum.common.model.HotSearch
 import com.sum.common.model.ProjectSubList

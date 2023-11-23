@@ -21,6 +21,9 @@
             <option value="$PROJECT_DIR$/lib_network" />
             <option value="$PROJECT_DIR$/lib_starter" />
             <option value="$PROJECT_DIR$/mod_main" />
+            <option value="$PROJECT_DIR$/mod_search" />
+            <option value="$PROJECT_DIR$/mod_user" />
+            <option value="$PROJECT_DIR$/mod_video" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -10,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.lib_framework.adapter.ViewPage2FragmentAdapter
 import com.example.lib_framework.base.BaseMvvmFragment
+import com.example.lib_framework.ext.gone
+import com.example.lib_framework.ext.visible
 import com.example.lib_framework.log.LogUtil
 import com.example.mod_main.R
 import com.example.mod_main.databinding.FragmentHomeBinding
@@ -40,6 +42,15 @@ class HomeFragment : BaseMvvmFragment<FragmentHomeBinding, HomeViewModel>(), OnR
     }
 
     private fun refresh() {
+        mViewModel.getBannerList().observe(this) { banners ->
+            banners?.let {
+                mBinding?.bannerHome?.visible()
+                mBinding?.bannerHome?.setData(it)
+            } ?: kotlin.run {
+                mBinding?.bannerHome?.gone()
+            }
+            mBinding?.refreshLayout?.finishRefresh()
+        }
         mViewModel.getProjectTab().observe(this) { tabs ->
             LogUtil.d(tabs.toString())
             tabs?.forEachIndexed { index, projectTabItem ->

@@ -1,5 +1,4 @@
-package com.sum.common.model
-
+package com.example.lib_common.model
 /**
  * @author mingyan.su
  * @date   2023/3/7 22:52
