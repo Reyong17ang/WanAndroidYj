@@ -17,7 +17,7 @@ import kotlin.math.sign
  * ViewPager2. The scrollable element needs to be the immediate and only child of this host layout.
  *
  * This solution has limitations when using multiple levels of nested scrollable elements
- * (e.g. a horizontal RecyclerView in a vertical RecyclerView in a horizontal ViewPager2).
+ * (e.g. a com.example.lib_framework.ext.horizontal RecyclerView in a com.example.lib_framework.ext.vertical RecyclerView in a com.example.lib_framework.ext.horizontal ViewPager2).
  * thinks:https://github.com/android/views-widgets-samples
  */
 class NestedScrollableHost : FrameLayout {

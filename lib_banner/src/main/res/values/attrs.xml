@@ -8,8 +8,8 @@
         <attr name="vpi_rtl" format="boolean" />
 
         <attr name="vpi_orientation" format="enum">
-            <enum name="horizontal" value="0" />
-            <enum name="vertical" value="1" />
+            <enum name="com.example.lib_framework.ext.horizontal" value="0" />
+            <enum name="com.example.lib_framework.ext.vertical" value="1" />
             <enum name="rtl" value="3" />
         </attr>
 

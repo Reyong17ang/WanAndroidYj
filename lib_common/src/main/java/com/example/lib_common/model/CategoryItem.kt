@@ -1,4 +1,4 @@
-package com.sum.common.model
+package com.example.lib_common.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

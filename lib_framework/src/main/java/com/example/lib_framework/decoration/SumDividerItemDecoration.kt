@@ -28,7 +28,7 @@ import android.util.Log
 import android.view.View
 
 /**
- * DividerItemDecoration is a [RecyclerView.ItemDecoration] that can be used as a divider
+ * DividerItemDecoration is a [RecyclerView.ItemDecoration] that can be used as a com.example.lib_framework.ext.divider
  * between items of a [LinearLayoutManager]. It supports both [.HORIZONTAL] and
  * [.VERTICAL] orientations.
  *
@@ -40,33 +40,33 @@ import android.view.View
  */
 class SumDividerItemDecoration(context: Context, orientation: Int) : ItemDecoration() {
     /**
-     * @return the [Drawable] for this divider.
+     * @return the [Drawable] for this com.example.lib_framework.ext.divider.
      */
     var drawable: Drawable?
         private set
     private var mDrawLastPositionDivider = true
 
     /**
-     * Current orientation. Either [.HORIZONTAL] or [.VERTICAL].
+     * Current com.example.lib_framework.ext.getOrientation. Either [.HORIZONTAL] or [.VERTICAL].
      */
     private var mOrientation = 0
     private val mBounds = Rect()
 
     /**
-     * Sets the orientation for this divider. This should be called if
-     * [RecyclerView.LayoutManager] changes orientation.
+     * Sets the com.example.lib_framework.ext.getOrientation for this com.example.lib_framework.ext.divider. This should be called if
+     * [RecyclerView.LayoutManager] changes com.example.lib_framework.ext.getOrientation.
      *
      * @param orientation [.HORIZONTAL] or [.VERTICAL]
      */
     fun setOrientation(orientation: Int) {
-        require(!(orientation != HORIZONTAL && orientation != VERTICAL)) { "Invalid orientation. It should be either HORIZONTAL or VERTICAL" }
+        require(!(orientation != HORIZONTAL && orientation != VERTICAL)) { "Invalid com.example.lib_framework.ext.getOrientation. It should be either HORIZONTAL or VERTICAL" }
         mOrientation = orientation
     }
 
     /**
-     * Sets the [Drawable] for this divider.
+     * Sets the [Drawable] for this com.example.lib_framework.ext.divider.
      *
-     * @param drawable Drawable that should be used as a divider.
+     * @param drawable Drawable that should be used as a com.example.lib_framework.ext.divider.
      */
     fun setDrawable(drawable: Drawable) {
         requireNotNull(drawable) { "Drawable cannot be null." }
@@ -173,11 +173,11 @@ class SumDividerItemDecoration(context: Context, orientation: Int) : ItemDecorat
     }
 
     /**
-     * Creates a divider [RecyclerView.ItemDecoration] that can be used with a
+     * Creates a com.example.lib_framework.ext.divider [RecyclerView.ItemDecoration] that can be used with a
      * [LinearLayoutManager].
      *
      * @param context     Current context, it will be used to access resources.
-     * @param orientation Divider orientation. Should be [.HORIZONTAL] or [.VERTICAL].
+     * @param com.example.lib_framework.ext.getOrientation Divider com.example.lib_framework.ext.getOrientation. Should be [.HORIZONTAL] or [.VERTICAL].
      */
     init {
         val a = context.obtainStyledAttributes(ATTRS)

@@ -855,7 +855,7 @@ open class BannerViewPager<T, H : BaseViewHolder<T>> @JvmOverloads constructor(
     }
 
     /**
-     * Sets the orientation of the ViewPager2.
+     * Sets the com.example.lib_framework.ext.getOrientation of the ViewPager2.
      *
      * @param orientation [ViewPager2.ORIENTATION_HORIZONTAL] or
      * [ViewPager2.ORIENTATION_VERTICAL]

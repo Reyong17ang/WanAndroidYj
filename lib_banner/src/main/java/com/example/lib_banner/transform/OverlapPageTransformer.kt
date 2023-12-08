@@ -9,7 +9,7 @@ import kotlin.math.abs
 import kotlin.math.max
 
 /**
- * gives veiwpager2 orientation
+ * gives veiwpager2 com.example.lib_framework.ext.getOrientation
  * Source from：https://github.com/KoderLabs/finite-cover-flow/blob/dev/lib/src/main/java/com/saeed/finiteflow/lib/OverlapSliderTransformer.kt
  */
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -72,7 +72,7 @@ class OverlapPageTransformer(
                             }
                 }
                 else -> throw IllegalArgumentException(
-                    "Gives correct orientation value, ViewPager2.ORIENTATION_HORIZONTAL or ViewPager2.ORIENTATION_VERTICAL"
+                    "Gives correct com.example.lib_framework.ext.getOrientation value, ViewPager2.ORIENTATION_HORIZONTAL or ViewPager2.ORIENTATION_VERTICAL"
                 )
             }
 
