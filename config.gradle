@@ -12,7 +12,7 @@ ext {
             applicationId    : "com.yj.xxmm",
             //使用exoPlayer编译版本需要到33，而33中有bug,xml写代码没有代码提示
             compileSdk       : 33,
-            buildToolsVersion: '32.0.0',
+            buildToolsVersion: '33.0.0',
             minSdk           : 26,
             targetSdk        : 32,
 
